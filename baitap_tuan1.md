@@ -13,7 +13,7 @@ Sự phát triển của công nghệ mới như 5G, AI tích hợp vào ứng d
 Doanh nghiệp ngày càng ưu tiên phát triển ứng dụng mobile để tiếp cận khách hàng nhanh hơn, tiện lợi hơn.
 
 3. Viết một ứng dụng có UI như sau và đẩy lên GitHub:
-👉 Bạn có thể tạo một ứng dụng đơn giản với giao diện như:
+ Bạn có thể tạo một ứng dụng đơn giản với giao diện như:
 
 Một màn hình hiển thị tiêu đề “Hello Mobile!”
 
