@@ -12,10 +12,60 @@ Sự phát triển của công nghệ mới như 5G, AI tích hợp vào ứng d
 
 Doanh nghiệp ngày càng ưu tiên phát triển ứng dụng mobile để tiếp cận khách hàng nhanh hơn, tiện lợi hơn.
 
-3. Viết một ứng dụng có UI như sau và đẩy lên GitHub:Em sẽ tạo ra một ứng dụng đơn giản với giao diện như:
+3. Viết một ứng dụng có UI như sau và đẩy lên GitHub:
+import 'package:flutter/material.dart';
 
-Một màn hình hiển thị tiêu đề “Hello Mobile!”
+void main() {
+  runApp(MyApp());
+}
 
-Một nút bấm "Click me!"
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: UserProfileScreen(),
+    );
+  }
+}
 
-Khi bấm vào nút thì hiển thị thông báo "You clicked the button!"
+class UserProfileScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('User Profile'),
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/profile.jpg'), // Thay bằng đường dẫn ảnh
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Johan Smith',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'California, USA',
+              style: TextStyle(fontSize: 18, color: Colors.grey),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Thêm chức năng cần thiết
+              },
+              child: Text('Edit Profile'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
